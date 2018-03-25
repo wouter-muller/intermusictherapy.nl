@@ -1,0 +1,22 @@
+.c-image-wrapper
+  background-color: $grey
+  overflow: hidden
+  position: relative
+
+  &.\--square
+    padding-top: 100%
+
+  &.\--round
+    border-radius: 100%
+    padding-top: 100%
+
+  &.\--portrait
+    img
+      width: 100%
+
+  &.\--landscape
+    img
+      height: 100%
+
+  img
+    +center

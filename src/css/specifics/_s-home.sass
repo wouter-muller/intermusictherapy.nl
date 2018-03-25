@@ -1,0 +1,175 @@
+@mixin left-padding
+  +media-query(ml)
+    padding-left: px(234)
+
+@mixin swing-in
+  transform: translateX(-100%)
+  transition: all 0.8s ease-out
+
+  &.\--in-view
+    transform: translateX(0px)
+
+.s-home
+  &__intro
+    +bg-full-size-image("background-photos/0016.jpg")
+
+    &-text
+      border-left: px(20) solid $turqouise
+      background-color: rgba(0,0,0, 0.5)
+      color: $inverted-text-color
+      +center
+      top: 40%
+
+      +media-query(m)
+        left: 65%
+
+      +media-query(ml)
+        max-width: px(600)
+
+    &-heading
+      +media-query(s)
+        +font-size(xl)
+
+      +media-query(ml)
+        +font-size(xxxl)
+
+    &-quote
+      font-style: italic
+
+      +media-query(s)
+        display: none
+
+      +media-query(ml)
+        +font-size(xl)
+
+    &-author
+      +media-query(s)
+        display: none
+
+  &__about-me
+    background-color: $turqouise
+    position: relative
+    +left-padding
+
+    &-text
+      color: $inverted-text-color
+      padding-bottom: px(150)
+      position: relative
+
+      img
+        max-width: 100%
+        max-height: 100%
+
+
+    &.\--in-view
+      .s-home__about-me-text
+        transform: translateX(0px)
+
+  &__about-music-therapy
+    +left-padding
+    min-height: 101vh
+
+  &__how-it-works
+    background-color: $turqouise
+    color: $inverted-text-color
+    +left-padding
+
+
+  &__contact
+    +left-padding
+
+.s-reviews
+  +left-padding
+  background-color: $turqouise
+  color: $inverted-text-color
+
+  &__review
+    padding: px(20)
+    background-color: $main-bg-color
+    color: $main-text-color
+
+  &__quote
+    font-style: italic
+
+.s-logo
+  background-color: rgba($turqouise-dark, 0.9)
+
+  +media-query(s)
+    text-align: center
+
+  +media-query(ml)
+    height: 100%
+    position: fixed
+    +z-index(logo)
+    top: 0
+    left: 0
+
+  img
+    width: px(150)
+
+  ul
+    border-top: 1px solid $turqouise
+    padding-top: px(10)
+
+    a
+      color: $turqouise
+      text-transform: uppercase
+
+      &.active
+        color: $inverted-text-color
+
+
+.s-hero__one
+  +bg-full-size-image("background-photos/0015.jpg")
+
+.s-hero__two
+  +bg-full-size-image("background-photos/music-retro-turntable.jpg")
+  height: 100vh
+  background-position: center center
+
+  &__quote
+    position: absolute
+    background-color: rgba($turqouise-dark, 0.8)
+    padding: px(10)
+    text-align: center
+    color: $inverted-text-color
+    top: 0
+    width: 100%
+
+
+    p
+      +font-size(xl)
+      font-style: italic
+
+      +media-query(ml)
+        padding-left: 300px
+
+.s-hero__three
+  +bg-full-size-image("background-photos/0019.jpg")
+
+.s-home__down-link
+  position: absolute
+  bottom: 40px
+  color: $inverted-text-color
+  +bg-image("icons/down.svg")
+  padding: px(20)
+  left: 50%
+  transform: translateX(-50%)
+  display: block
+  +font-size(xl)
+  // text-transform: uppercase
+  background-color: rgba(0,0,0, 0.5)
+  background-size: 60% 60%
+  background-position: center center
+  +size(px(60))
+  border-radius: 100%
+
+  +media-query(s)
+    display: none
+
+.u-standard-padding
+  +media-query(s)
+    padding: $site__default-spacing
+
+  +media-query(ml)
+    padding: $site__default-spacing * 2

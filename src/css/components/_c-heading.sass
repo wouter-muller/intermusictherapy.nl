@@ -1,0 +1,21 @@
+.c-heading
+  font-weight: 400
+
+  &.\--m
+    +font-size(m)
+
+  &.\--l
+    +font-size(l)
+
+  &.\--xl
+    +font-size(xl)
+
+  &.\--xxl
+    +font-size(xxl)
+
+  &.\--xxxl
+    +media-query(s)
+      +font-size(xxl)
+
+    +media-query(ml)
+      +font-size(xxxl)

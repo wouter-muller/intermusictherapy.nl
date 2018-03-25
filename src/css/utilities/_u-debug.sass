@@ -1,0 +1,23 @@
+.u-debug
+  position: fixed
+  bottom: 0
+  left: 0
+  background-color: $inverted-bg-color
+  color: $inverted-text-color
+  padding: px(5) px(20)
+
+  &__current-breakpoint
+    &--small
+      +media-query(ml)
+        display: none
+
+    &--medium
+      +media-query(s)
+        display: none
+
+      +media-query(l)
+        display: none
+
+    &--large
+      +media-query(sm)
+        display: none
