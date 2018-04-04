@@ -12,48 +12,67 @@
 .s-home
   &__intro
     +bg-full-size-image("background-photos/0016.jpg")
+    background-position: center bottom
+
+    &-quote-wrapper
+      background-color: rgba(0,0,0, 0.5)
+      position: absolute
+      left: 0
+      width: 100%
+      +left-padding
+      text-align: center
+      +padding-top-bottom(px(20))
+      top: 65%
+      color: $inverted-text-color
+
+      +media-query(s)
+        display: none
+
+    &-quote
+      font-style: italic
+      +font-size(xxl)
+      +padding-left-right(px(50))
+
+    &-author
+      +font-size(m)
 
     &-text
-      border-left: px(20) solid $turqouise
+      color: lighten($turqouise, 20%)
+      // border-left: px(20) solid $turqouise
       background-color: rgba(0,0,0, 0.5)
-      color: $inverted-text-color
-      +center
-      top: 40%
+      position: absolute
+      +padding-top-bottom(px(20))
+      +left-padding
+      width: 100%
+      left: 0
+      text-align: center
 
-      +media-query(m)
-        left: 65%
+      +media-query(s)
+        top: 50%
+        transform: translateY(-50%)
 
       +media-query(ml)
-        max-width: px(600)
+        top: 10%
 
     &-heading
       font-weight: normal
 
       +media-query(s)
-        +font-size(l)
-
-      +media-query(ml)
         +font-size(xxl)
 
+      +media-query(ml)
+        +font-size(xxxl)
+        +padding-left-right(px(50))
+
       span
+        display: inline-block
+
         +media-query(s)
           +font-size(s)
+          margin-top: px(30)
 
         +media-query(ml)
           +font-size(m)
-
-    &-quote
-      font-style: italic
-
-      +media-query(s)
-        display: none
-
-      +media-query(ml)
-        +font-size(xl)
-
-    &-author
-      +media-query(s)
-        display: none
 
   &__about-me
     background-color: $turqouise
