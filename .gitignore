@@ -1,4 +1,4 @@
-_site
+_site/src
 .sass-cache
 .jekyll-metadata
 src/node_modules/*
