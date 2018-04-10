@@ -4,3 +4,7 @@ plugins:
 languages: ["nl", "en"]
 exclude_from_localizations: ["src", "js", "css", "assets"]
 baseurl: ""
+
+exclude:
+  - node_modules
+  - src

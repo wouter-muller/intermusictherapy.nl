@@ -4,13 +4,19 @@ layout: page
 
 <div class="s-logo u-standard-padding">
   <a href="#top" class="js-scroll-to"><img src="/assets/images/imt-logo-horizontal2.png" alt="Inter Music Therapy" class="u-mb"></a>
-  <ul class="c-list --unstyled u-color--inverted-text">
+  <ul class="c-list --unstyled">
     <li class="u-pv-"><a href="#about-me" class="js-scroll-to">{% t shared.about-me %}</a></li>
     <li class="u-pv-"><a href="#about-music-therapy" class="js-scroll-to">{% t shared.faqs %}</a></li>
     <li class="u-pv-"><a href="#how-it-works" class="js-scroll-to">{% t shared.how-it-works %}</a></li>
     <li class="u-pv-"><a href="#reviews" class="js-scroll-to">{% t shared.experiences %}</a></li>
     <li class="u-pv-"><a href="#contact" class="js-scroll-to">{% t shared.contact %}</a></li>
   </ul>
+
+  <div class="c-list l-grid--3-cols l-grid--3-cols@s u-pt+ s-languages">
+    <div class="u-mt+"><a href="/"><img src="/assets/images/icons/flags/dutch.svg"></a></div>
+    <div class="u-mt+"><a href="/en"><img src="/assets/images/icons/flags/english.svg"></a></div>
+    <!-- <div class="u-mt+"><a href="/de"><img src="/assets/images/icons/flags/german.svg"></a></div> -->
+  </div>
 </div>
 
 <div class="s-home__intro">
@@ -80,12 +86,12 @@ layout: page
 
     <a href="#" class="c-link js-faq-link">
       <h3 class="c-heading --xl u-mb c-faq__question">
-        2. {% t faqs.question-1 %}
+        2. {% t faqs.question-2 %}
       </h3>
     </a>
 
     <div class="c-faq__answer" style="display: none">
-      <p class="u-mb">{% t faqs.answer-1 %}</p>
+      <p class="u-mb">{% t faqs.answer-2 %}</p>
     </div>
 
     <a href="#" class="c-link js-faq-link">
@@ -212,13 +218,13 @@ layout: page
           <img class="u-mr- u-display--inline-block" src="/assets/images/icons/mail.svg" alt=""> <a href="mailto:{% t contact.e-mail %}" class="c-link">{% t contact.e-mail %}</a>
         </p>
         <p class="u-mb u-pb++">
-          KVK: 123456789<br>
-          AGB: 90064221
+          {% t contact.kvk %}<br>
+          {% t contact.agb %}
         </p>
 
       </div>
     </div>
-    <h3 class="c-heading --xl u-mb">Member of:</h3>
+    <h3 class="c-heading --xl u-mb">{% t contact.member-of %}</h3>
     <div class="l-grid l-grid--3-cols l-grid--align-center l-grid--double-gap" style="text-align: center; max-width: 650px">
       <img src="/assets/images/fvb-logo.jpg" alt="FVB">
       <img src="/assets/images/NVvMT_rood_rgb.jpg" alt="NVvMT">
@@ -227,8 +233,8 @@ layout: page
 
     <div class="u-standard-padding u-border-top u-text-align--center">
 
-      <p>Website designed and built by <a class="c-link" href="http://woutermuller.net/" target="_blank">Wouter Muller</a></p>
-      <p>Photos made by <a class="c-link" href="http://www.lsfotografie.nl/" target="_blank">Lyuda Stinissen</a></p>
+      <p>{% t contact.credit-website %}<a class="c-link" href="http://woutermuller.net/" target="_blank">Wouter Muller</a></p>
+      <p>{% t contact.credit-photos %}<a class="c-link" href="http://www.lsfotografie.nl/" target="_blank">Lyuda Stinissen</a></p>
 
     </div>
   </div>

@@ -35,6 +35,7 @@
 
     &-author
       +font-size(m)
+      white-space: nowrap
 
     &-text
       color: lighten($turqouise, 20%)
@@ -126,6 +127,7 @@
     text-align: center
 
   +media-query(ml)
+    max-width: px(275)
     height: 100%
     position: fixed
     +z-index(logo)
@@ -135,16 +137,16 @@
   img
     width: px(150)
 
-  ul
+  .c-list
     border-top: 1px solid $turqouise
-    padding-top: px(10)
+    +padding-top-bottom(px(10))
 
-    a
-      color: $turqouise
-      text-transform: uppercase
+  a
+    color: $turqouise
+    text-transform: uppercase
 
-      &.active
-        color: $inverted-text-color
+    &.active
+      color: $inverted-text-color
 
 
 .s-hero__one
@@ -201,3 +203,11 @@
 
   +media-query(ml)
     padding: $site__default-spacing * 2
+
+.s-languages
+  img
+    +media-query(s)
+      max-width: 50px
+
+    +media-query(ml)
+      max-width: 25px
